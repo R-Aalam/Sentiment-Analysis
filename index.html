@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentiment Pie Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="static\stylesb.css" />
+</head>
+<body>
+<header>
+  <h2>Sentiment Distribution</h2>
+</header>
+<main>
+  <textarea id="textInput" rows="4" cols="50" placeholder="Enter your text here..."></textarea><br>
+  <button onclick="analyzeText()">Analyze Text</button>
+  <br><br><br>
+  <hr>
+ 
+  <input type="file" id="fileInput">
+  <button onclick="analyzeFile()" >Analyze File</button>
+  <p id="para"></p> 
+  <canvas id="sentimentPieChart"></canvas>
+  <div id="filterButtons" class="filter-buttons" style="display:none;">
+  <button onclick="filterSentiments('Positive')">Show Positive</button>
+  <button onclick="filterSentiments('Neutral')">Show Neutral</button>
+  <button onclick="filterSentiments('Negative')">Show Negative</button>
+</div>
+
+
+<div id="filteredResults" class="filtered-results">
+  <!-- Filtered comments will appear here -->
+</div>
+
+
+  <script src="/static/script.js"></script>
+  </main>
+</body>
+</html>
